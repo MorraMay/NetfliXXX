@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.0-alpha3-dist/css_/bootstrap.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header_block">
+      <div id="top"></div>
+      <!-- /*----- HEADER----- */ -->
+
+      <header class="header">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <h4 class="modal_tittle">Увійти</h4>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                  />
+                  <label for="floatingInput"
+                    >Адреса електронної пошти або номер телефону</label
+                  >
+                </div>
+                <div class="form-floating">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="floatingPassword"
+                    placeholder="Password"
+                  />
+                  <label for="floatingPassword">Пароль</label>
+                </div>
+
+                <button>Увійти</button>
+                <div class="modal-body_flex">
+                  <div class="checkbox1">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="hidden-checkbox" />
+                      <div class="checkbox">
+                        <i class="fa-solid fa-check"></i>
+                      </div>
+                      Запам'ятати мене</label
+                    >
+                  </div>
+                  <a
+                    href="https://www.netflix.com/ua-ru/LoginHelp"
+                    target="_blank"
+                    >Потрібна допомога?</a
+                  >
+                </div>
+                <div class="text">
+                  <p class="text1">
+                    Уперше на Netflix?
+                    <a href="https://www.netflix.com/ua-ru/" target="_blank"
+                      >Зареєструватися.</a
+                    >
+                  </p>
+                </div>
+                <div class="modal_footer">
+                  <p>
+                    Щоб переконатися, що ви не бот, сторінка захищена системою
+                    Google reCAPTCHA.
+                  </p>
+                  <span onclick="toggle ('.toggle_block', 'show')"
+                    >Докладніше.</span
+                  >
+                  <p class="toggle_block">
+                    Інформація, яку збирає система Google reCAPTCHA, регулюється
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      >Політикою конфіденційності</a
+                    >
+                    й
+                    <a href="https://policies.google.com/terms" target="_blank"
+                      >Умовами використання</a
+                    >
+                    Google. Ці дані використовуються, щоб надавати, підтримувати
+                    й покращувати сервіс reCAPTCHA, а також у цілях загальної
+                    безпеки (Google не застосовуватиме їх для персоналізації
+                    реклами).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./img/logo.png" alt="Logo" class="header_logo" />
+        <div class="header_menu">
+          <form action="#" class="header_form">
+            <span class="material-symbols-outlined"> language </span>
+            <select class="header_select">
+              <option value="Українська">Українська</option>
+              <option value="Англійська">Англійська</option>
+            </select>
+          </form>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn_header btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Увійти
+          </button>
+        </div>
+      </header>
+
+      <!-- /* -----HEADER_INFO----- */ -->
+
+      <div class="header_info">
+        <h1>Фільми, серіали й інший контент без обмежень.</h1>
+        <p>
+          Дивіться будь-де. Скасувати підписку можна будь-коли. Готові до
+          перегляду? Введіть адресу електронної пошти, щоб оформити або поновити
+          підписку.
+        </p>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Адреса електоронної пошти"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Почати
+            <span class="material-symbols-outlined"> chevron_right </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <main class="main">
+      <!-- /* -----CAROUSEL----- */ -->
+
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption d-none d-md-block">
+              <img src="./img/img.png" class="d-block w-100" alt="..." />
+              <h5>Дивіться на телевізорі.</h5>
+              <p>
+                Дивіться на Smart TV, Playstation, Xbox, Chromecast, Apple TV,
+                Blu-ray-програвачах тощо.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <img src="./img/img2.png" class="d-block w-100" alt="..." />
+              <h5>Завантажуйте контент і дивіться його офлайн.</h5>
+              <p>
+                Легко зберігайте улюблені телесеріали й фільми, щоб дивитися їх
+                будь-коли.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <img src="./img/img3.png" class="d-block w-100" alt="..." />
+              <h5>Створюйте профілі для дітей.</h5>
+              <p>
+                Ваші діти зможуть мандрувати країною фантазії разом з улюбленими
+                персонажами в спеціальних профілях, які входять у вартість
+                підписки.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <img src="./img/img4.png" class="d-block w-100" alt="..." />
+              <h5>Дивіться будь-де.</h5>
+              <p>
+                Дивіться фільми й телесеріали без обмежень на смартфоні,
+                планшеті, ноутбуці й телевізорі без доплат.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!----- media_carousel ----->
+
+      <div class="media_carousel">
+        <div class="carousel_block">
+          <h5>Дивіться на телевізорі.</h5>
+          <p>
+            Дивіться на Smart TV, Playstation, Xbox, Chromecast, Apple TV,
+            Blu-ray-програвачах тощо.
+          </p>
+          <img src="./img/img.png" alt="" />
+        </div>
+        <div class="line"></div>
+        <div class="carousel_block">
+          <h5>Завантажуйте контент і дивіться його офлайн.</h5>
+          <p>
+            Легко зберігайте улюблені телесеріали й фільми, щоб дивитися їх
+            будь-коли.
+          </p>
+          <img src="./img/img2.png" alt="" />
+        </div>
+        <div class="line"></div>
+        <div class="carousel_block">
+          <h5>Створюйте профілі для дітей.</h5>
+          <p>
+            Ваші діти зможуть мандрувати країною фантазії разом з улюбленими
+            персонажами в спеціальних профілях, які входять у вартість підписки.
+          </p>
+          <img src="./img/img3.png" alt="" />
+        </div>
+        <div class="line"></div>
+        <div class="carousel_block">
+          <h5>Дивіться будь-де.</h5>
+          <p>
+            Дивіться фільми й телесеріали без обмежень на смартфоні, планшеті,
+            ноутбуці й телевізорі без доплат.
+          </p>
+          <img src="./img/img4.png" alt="" />
+        </div>
+      </div>
+      <!-- /*----- ACCORDION----- */ -->
+
+      <div class="line"></div>
+      <h2 class="accordion_tittle">Поширені запитання</h2>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Що таке Netflix?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Netflix — це сервіс потокового передавання відео, що дає змогу
+                дивитися різноманітні відзначені нагородами телесеріали, фільми,
+                аніме, документалістику й інший контент на тисячах пристроїв із
+                підключенням до Інтернету.
+              </p>
+              <p>
+                Ви можете дивитися скільки завгодно й коли завгодно без реклами,
+                і все це за єдиною низькою щомісячною ціною. Ви завжди знайдете
+                для себе щось нове. Крім того, ще більше телесеріалів і фільмів
+                додається щотижня!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Скількі коштує підписка Netflix?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Дивіться Netflix на смартфоні, планшеті, Smart TV, ноутбуці або
+              пристрої потокової передачі за фіксованою щомісячною ціною. Плани
+              від 4,99 EUR до 9,99 EUR на місяць. Без доплат й угод.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Де можна дивитися контент?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Дивіться будь-де, будь-коли. Увійдіть у свій обліковий запис
+                Netflix, щоб дивитися контент онлайн на сайті netflix.com з
+                персонального комп’ютера або будь-якого пристрою з підключенням
+                до Інтернету, на якому можна завантажити застосунок Netflix,
+                як-от Smart TV, смартфон, планшет, медіапрогравач для потокової
+                передачі або ігрова приставка.
+              </p>
+              <p>
+                Крім того, ви можете завантажувати улюблені серіали в застосунку
+                для iOS, Android або Windows 10. Завантажуйте контент і дивіться
+                його в дорозі навіть без підключення до Інтернету. Беріть
+                Netflix із собою.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour"
+              aria-expanded="false"
+              aria-controls="flush-collapseFour"
+            >
+              Як скасувати підписку?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Netflix надає гнучкі умови. Жодних надокучливих угод чи
+              зобов’язань. Скасувати підписку можна всього за два кліки. Жодних
+              комісій за скасування. Оформити або скасувати підписку можна
+              будь-коли.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive"
+              aria-expanded="false"
+              aria-controls="flush-collapseFive"
+            >
+              Що можна дивитися на Netflix?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Netflix пропонує обширну бібліотеку художніх фільмів,
+              документалістики, телесеріалів, аніме, відзначеного нагородами
+              оригінального контенту тощо. Дивіться скільки завгодно й коли
+              завгодно.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSix"
+              aria-expanded="false"
+              aria-controls="flush-collapseSix"
+            >
+              Netflix підходить для дітей?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseSix"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Інтерфейс Netflix для дітей включено у вашу підписку. Діти
+                можуть насолоджуватися телесеріалами й фільмами для всієї родини
+                у своєму профілі, а батьки при цьому контролюватимуть такий
+                контент.
+              </p>
+              <p>
+                Дитячі профілі захищаються батьківським контролем із PIN-кодом.
+                Таким чином ви зможете ставити вікові обмеження на дитячий
+                контент і блокувати певні найменування, щоб дитина їх не
+                переглядала.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSeven"
+              aria-expanded="false"
+              aria-controls="flush-collapseSeven"
+            >
+              Чому відображається текст цією мовою?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseSeven"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Мову встановлено відповідно до налаштувань браузера.
+            </div>
+          </div>
+        </div>
+        <p class="accordion_text">
+          Готові до перегляду? Введіть адресу електронної пошти, щоб оформити
+          або поновити підписку.
+        </p>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Адреса електоронної пошти"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Почати
+            <span class="material-symbols-outlined"> chevron_right </span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="line"></div>
+
+    <!-- /*-----FOOTER----- */ -->
+
+    <footer class="footer">
+      <p class="footer_tittle">
+        Маєте запитання? Зателефонуйте за номером
+        <span class="contact">0800-509-416</span>
+      </p>
+      <div class="footer_content">
+        <ul class="content_block">
+          <li class="block_list">
+            <a href="https://help.netflix.com/ru/node/412" target="_blank"
+              >Поширені запитання</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://media.netflix.com/en/" target="_blank"
+              >Медіацентр</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://devices.netflix.com/en/" target="_blank"
+              >Способи перегляду</a
+            >
+          </li>
+          <li class="block_list"><a href="#">Налаштування файлів cookie</a></li>
+          <li class="block_list">
+            <a href="https://fast.com/">Перевірка швидкості</a>
+          </li>
+        </ul>
+        <ul class="content_block">
+          <li class="block_list">
+            <a href="https://help.netflix.com/ru/" target="_blank"
+              >Довідковий центр</a
+            >
+          </li>
+          <li class="block_list">
+            <a
+              href="https://ir.netflix.net/ir-overview/profile/default.aspx"
+              target="_blank"
+              >Зв’язки з інвесторами</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/termsofuse" target="_blank"
+              >Умови використання</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/corpinfo" target="_blank"
+              >Корпоративна інформація</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/notices" target="_blank"
+              >Юридичні повідомлення</a
+            >
+          </li>
+        </ul>
+
+        <ul class="content_block">
+          <li class="block_list">
+            <a
+              href="https://www.netflix.com/ua-ru/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fyouraccount"
+              target="_blank"
+              >Обліковий запис</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://jobs.netflix.com/" target="_blank">Вакансії</a>
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/privacy" target="_blank"
+              >Конфіденційність</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/ru/contactus" target="_blank"
+              >Зв’язатися з нами</a
+            >
+          </li>
+          <li class="block_list">
+            <a
+              href="https://www.netflix.com/ua/browse/genre/839338"
+              target="_blank"
+              >Тільки на Netflix</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer_content-media">
+        <ul class="content-media_block">
+          <li class="block_list">
+            <a href="https://help.netflix.com/ru/node/412" target="_blank"
+              >Поширені запитання</a
+            >
+          </li>
+          <li class="block_list">
+            <a
+              href="https://www.netflix.com/ua-ru/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fyouraccount"
+              target="_blank"
+              >Обліковий запис</a
+            >
+          </li>
+          <li class="block_list">
+            <a
+              href="https://ir.netflix.net/ir-overview/profile/default.aspx"
+              target="_blank"
+              >Зв’язки з інвесторами</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://devices.netflix.com/en/" target="_blank"
+              >Способи перегляду</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/privacy" target="_blank"
+              >Конфіденційність</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/corpinfo" target="_blank"
+              >Корпоративна інформація</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://fast.com/">Перевірка швидкості</a>
+          </li>
+          <li class="block_list">
+            <a
+              href="https://www.netflix.com/ua/browse/genre/839338"
+              target="_blank"
+              >Тільки на Netflix</a
+            >
+          </li>
+        </ul>
+        <ul class="content-media_block">
+          <li class="block_list">
+            <a href="https://help.netflix.com/ru/" target="_blank"
+              >Довідковий центр</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://media.netflix.com/en/" target="_blank"
+              >Медіацентр</a
+            >
+          </li>
+          <li class="block_list">
+            <a href="https://jobs.netflix.com/" target="_blank">Вакансії</a>
+          </li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/legal/termsofuse" target="_blank"
+              >Умови використання</a
+            >
+          </li>
+          <li class="block_list"><a href="#">Налаштування файлів cookie</a></li>
+          <li class="block_list">
+            <a href="https://help.netflix.com/ru/contactus" target="_blank"
+              >Зв’язатися з нами</a
+            >
+          </li>
+        </ul>
+      </div>
+      <form action="#" class="footer_form">
+        <span class="material-symbols-outlined"> language </span>
+        <select class="footer_select">
+          <option value="Українська">Українська</option>
+          <option value="Англійська">Англійська</option>
+        </select>
+      </form>
+      <div class="footer_end">
+        <p>Netflix Україна</p>
+        <a href="#top"><i class="fa-regular fa-circle-up fa-bounce"></i></a>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/6d7cb93199.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./bootstrap-5.3.0-alpha3-dist/js_/bootstrap.bundle.js"></script>
+    <script>
+      function toggle(toggle_block, show) {
+        document.querySelector(".toggle_block").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
